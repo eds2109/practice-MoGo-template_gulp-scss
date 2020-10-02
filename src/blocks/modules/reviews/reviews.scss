@@ -1,0 +1,105 @@
+.section--gray {
+    background-color: #f8f8f8;
+}
+
+.reviews {
+    position: relative;
+
+    padding: 0 110px;
+
+    @media (max-width: 1200px) {
+        &__text {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 990px) {
+        padding: 0 50px;
+
+        &__photo {
+            padding: 25px;
+
+            &--avatar {
+                left: -20px;
+                width: 190px;
+            }
+        }
+        &__item {
+            padding-left: 175px;
+        }
+    }
+
+    @media (max-width: 770px) {
+        &__photo {
+            position: static;
+            margin: 0 auto 20px;
+        }
+        &__item {
+            padding-left: 0;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__author {
+            font-size: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        padding-left: 215px;
+    }
+
+    &__photo {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        left: 20px;
+
+        border: 2px solid #95e1d3;
+
+        padding: 40px;
+
+        &--avatar {
+            top: 0;
+            left: -40px;
+
+            border: none;
+
+            padding: 0;
+        }
+    }
+
+    &__text {
+        margin-bottom: 15px;
+
+        font-style: italic;
+        font-weight: 300;
+        font-size: 24px;
+        color: #999999;
+    }
+
+    &__author {
+        font-size: 24px;
+        font-family: "Kaushan Script",
+            cursive;
+        color: $color_black;
+
+        &:before {
+            content: "";
+
+            display: inline-block;
+            width: 60px;
+            height: 3px;
+            margin-right: 10px;
+
+            vertical-align: middle;
+
+            background-color: #f38181;
+        }
+    }
+}
+
+@import "reviews__btn";

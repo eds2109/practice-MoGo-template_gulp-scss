@@ -1,0 +1,63 @@
+.section {
+    padding: 40px 0;
+
+    /* Media */
+    @media (max-width: 770px) {
+        padding: 20px 0;
+    }
+
+    @media (max-width: 576px) {
+        &__header {
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__suptitle {
+            font-size: 20px;
+        }
+        &__title:after {
+            margin: 20px auto 30px;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        max-width: 950px;
+        margin: 0 auto 50px;
+
+        text-align: center;
+    }
+
+    &__suptitle {
+        font-size: 24px;
+        font-family: "Kaushan Script",
+            cursive;
+        color: $color_black;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        color: $color_black;
+        text-transform: uppercase;
+
+        &:after {
+            content: "";
+
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin: 30px auto 50px;
+
+            background-color: #f38181;
+        }
+
+        &__text {
+            font-size: 15px;
+            color: #999999;
+        }
+    }
+}
+
+@import "card";

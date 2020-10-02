@@ -1,0 +1,165 @@
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    /* Media */
+    @media (max-width: 770px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: #eb8b8d;
+
+        &__link {
+            display: block;
+            margin: 0;
+            padding: 8px 20px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        margin: 0 15px;
+
+        transition: color 0.1s linear;
+        vertical-align: top;
+
+        color: #fff;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            display: block;
+
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+
+            transition: opacity 0.1s linear;
+
+            background-color: #fce38a;
+            opacity: 0;
+        }
+
+        &.active {
+            color: #fce38a;
+        }
+
+        &:hover, &.active {
+            color: #fce38a;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Nav toggle */
+.nav-toggle {
+    display: none;
+
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+
+    border: 0;
+    padding: 10px 0;
+
+    font-size: 0;
+    color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-toggle:focus {
+    outline: 0;
+}
+
+.nav-toggle__item {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin: auto;
+
+    transition: background 0.2s linear;
+
+    background-color: #fff;
+}
+
+.nav-toggle.active .nav-toggle__item {
+    background: none;
+}
+
+.nav-toggle__item:before, .nav-toggle__item:after {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    transition: transform 0.2s linear;
+
+    background-color: #fff;
+}
+
+.nav-toggle__item:before {
+    top: -8px;
+}
+
+.nav-toggle__item:after {
+    bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle__item:before {
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0, -2px, 0);
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0, 3px, 0);
+}
+
+@media (max-width: 770px) {
+    .nav {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: #eb8b8d;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}

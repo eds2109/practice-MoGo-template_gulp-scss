@@ -1,0 +1,45 @@
+.header {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 10px 0;
+
+    @media (max-width: 770px) {
+        padding: 10px 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    &.fixed {
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px 0;
+
+        transform: translate3d(0, 0, 0);
+        background-color: #eb8b8d;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+    }
+
+    &.active {
+        background-color: #eb8b8d;
+    }
+}
+
+@import "nav";

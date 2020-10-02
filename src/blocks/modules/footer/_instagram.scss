@@ -1,0 +1,33 @@
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        width: 33%;
+
+        border-bottom: 1px solid #ffffff;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__link {
+        margin-top: 10px;
+
+        a {
+            font-style: italic;
+            font-weight: 300;
+            font-size: 13px;
+            color: $color_black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

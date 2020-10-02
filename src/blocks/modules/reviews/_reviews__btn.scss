@@ -1,0 +1,33 @@
+.reviews__btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 0;
+    color: transparent;
+
+    &:after {
+        content: "";
+
+        display: block;
+        width: 17px;
+        height: 17px;
+
+        border-top: 2px solid #cccccc;
+        border-left: 2px solid #cccccc;
+    }
+}
+
+.reviews__btn--prew {
+    left: 0;
+
+    transform: rotate(-45deg);
+}
+
+.reviews__btn--next {
+    right: 0;
+
+    transform: rotate(135deg);
+}

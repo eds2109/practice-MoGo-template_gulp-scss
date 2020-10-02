@@ -1,0 +1,51 @@
+.social {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+
+        font-size: 30px;
+        line-height: 1;
+        color: #f38181;
+        text-decoration: none;
+
+        background-color: #fce38a;
+        border-right: 1px solid #f38181;
+
+        transition: background 0.1s linear, color 0.1s linear;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        &:hover {
+            color: #ffffff;
+
+            background-color: #f38181;
+        }
+    }
+}
+
+.card {
+    &__info {
+        margin-top: 20px;
+
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 14px;
+        color: $color_black;
+        text-transform: uppercase;
+    }
+
+    &__prof {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 15px;
+        color: #999999;
+    }
+}

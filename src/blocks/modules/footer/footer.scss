@@ -1,0 +1,125 @@
+.footer {
+    padding-top: 50px;
+
+    background-color: #f8f8f8;
+
+    @media (max-width: 990px) {
+        padding: 0;
+        &__col--first, &__col--second, &__col--third {
+            width: 100%;
+
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 420px) {
+        &__social-content a {
+            margin-left: 5px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 65px;
+        margin: 0 -15px;
+    }
+
+    &__col {
+        padding: 0 15px;
+    }
+
+    &__col--first {
+        width: 40%;
+    }
+
+    &__col--second {
+        width: 29%;
+    }
+
+    &__col--third {
+        width: 22%;
+    }
+    &__logo {
+        margin-bottom: 30px;
+
+        font-weight: 700;
+        font-size: 46px;
+        color: #cccccc;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+
+        font-size: 15px;
+        color: #999999;
+    }
+
+    &__social {
+        margin-bottom: 25px;
+    }
+
+    &__social-heder {
+        padding-bottom: 15px;
+
+        font-size: 14px;
+        color: $color_black;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        b {
+            font-size: 18px;
+        }
+    }
+
+    &__social-content {
+        padding-top: 15px;
+
+        font-style: italic;
+        font-weight: 300;
+        font-size: 15px;
+        color: #999999;
+
+        a {
+            display: inline-block;
+            margin-left: 10px;
+
+            font-size: 18px;
+            vertical-align: middle;
+            color: #95e1d3;
+        }
+
+        i:hover {
+            color: darken(#95e1d3, 30%);
+        }
+    }
+
+    &__title {
+        margin: 30px 0;
+
+        font-size: 14px;
+        color: $color_black;
+        text-transform: uppercase;
+    }
+}
+
+@import "subscribe";
+@import "blogs";
+@import "instagram";
+
+.copyright {
+    padding: 20px 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: $color_black;
+
+    border-top: 1px solid #e5e5e5;
+
+    span {
+        color: #f38181;
+    }
+}

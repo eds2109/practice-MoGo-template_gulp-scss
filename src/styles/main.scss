@@ -1,0 +1,33 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+body {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  color: $color_black;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.page {
+	overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+	padding: 0 15px;
+}
